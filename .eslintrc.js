@@ -15,10 +15,10 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint'],
   rules: {
     'no-console': 'off',
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
   },
 };
