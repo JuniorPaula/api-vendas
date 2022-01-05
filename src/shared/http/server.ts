@@ -1,10 +1,11 @@
 import 'reflect-metadata';
 import dotenv from 'dotenv';
+import 'express-async-errors';
 import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 
 import AppError from '@shared/errors/AppError';
-import '@shared/typeorm';
+import '../typeorm';
 import routes from './routes';
 
 dotenv.config();

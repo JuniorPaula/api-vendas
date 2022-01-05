@@ -20,5 +20,7 @@ module.exports = {
     'no-console': 'off',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'class-methods-use-this': 'off',
   },
 };
