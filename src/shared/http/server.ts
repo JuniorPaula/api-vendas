@@ -4,6 +4,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 
 import AppError from '@shared/errors/AppError';
+import '@shared/typeorm';
 import routes from './routes';
 
 dotenv.config();
