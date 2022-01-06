@@ -7,3 +7,10 @@ export const userCreateVefify = celebrate({
     password: Joi.string().required(),
   },
 });
+
+export const sessionCreateVefify = celebrate({
+  [Segments.BODY]: {
+    email: Joi.string().email().required(),
+    password: Joi.string().required(),
+  },
+});
