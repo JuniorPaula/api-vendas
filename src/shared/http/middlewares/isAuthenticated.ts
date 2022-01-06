@@ -3,6 +3,12 @@ import { verify } from 'jsonwebtoken';
 import { NextFunction, Request, Response } from 'express';
 import authConfig from '@config/auth';
 
+interface TokenPayload {
+  iat: number;
+  exp: number;
+  sub: string;
+}
+
 export default function isAuthenticated(
   request: Request,
   response: Response,
@@ -15,8 +21,13 @@ export default function isAuthenticated(
   const [, token] = authHeader.split(' ');
 
   try {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const decodeToken = verify(token, authConfig.jwt.secret);
+    const decodedToken = verify(token, authConfig.jwt.secret);
+
+    const { sub } = decodedToken as TokenPayload;
+
+    request.user = {
+      id: sub,
+    };
 
     return next();
   } catch {
