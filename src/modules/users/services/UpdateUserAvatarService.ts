@@ -8,7 +8,7 @@ import UsersRepository from '../typeorm/repositories/UsersRepository';
 
 interface IRequest {
   user_id: string;
-  avatarFilename: string;
+  avatarFilename?: string;
 }
 
 class UpdateUserAvatarService {
@@ -28,7 +28,8 @@ class UpdateUserAvatarService {
       }
     }
 
-    user.avatar = avatarFilename;
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    user.avatar = avatarFilename!;
 
     await usersRepository.save(user);
 
