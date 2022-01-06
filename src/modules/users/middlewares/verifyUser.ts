@@ -20,3 +20,11 @@ export const emailVefifyToForgotPassword = celebrate({
     email: Joi.string().email().required(),
   },
 });
+
+export const resetVefifyEmailToForgotPassword = celebrate({
+  [Segments.BODY]: {
+    token: Joi.string().uuid().required(),
+    password: Joi.string().required(),
+    password_confirmation: Joi.string().required().valid(Joi.ref('password')),
+  },
+});
