@@ -14,3 +14,9 @@ export const sessionCreateVefify = celebrate({
     password: Joi.string().required(),
   },
 });
+
+export const emailVefifyToForgotPassword = celebrate({
+  [Segments.BODY]: {
+    email: Joi.string().email().required(),
+  },
+});
