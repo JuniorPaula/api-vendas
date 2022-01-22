@@ -3,8 +3,8 @@ import path from 'path';
 import fs from 'fs';
 import { getCustomRepository } from 'typeorm';
 import uploadConfig from '@config/upload';
-import User from '../typeorm/entities/User';
-import UsersRepository from '../typeorm/repositories/UsersRepository';
+import User from '../infra/typeorm/entities/User';
+import UsersRepository from '../infra/typeorm/repositories/UsersRepository';
 
 interface IRequest {
   user_id: string;
