@@ -2,7 +2,7 @@ import { Router } from 'express';
 import multer from 'multer';
 import uploadConfig from '@config/upload';
 import UserController from '../controllers/UsersController';
-import isAuthenticated from '../../../shared/http/middlewares/isAuthenticated';
+import isAuthenticated from '../../../shared/infra/http/middlewares/isAuthenticated';
 import { userCreateVefify } from '../middlewares/verifyUser';
 import UserAvatarController from '../controllers/UserAvatarController';
 
