@@ -5,7 +5,6 @@ import DeleteCustomerService from '../../../services/DeleteCustomerService';
 import ListCustomerService from '../../../services/ListCustomerService';
 import ShowCustomerService from '../../../services/ShowCustomerService';
 import UpdateCustomerService from '../../../services/UpdateCustomerService';
-import CustomerRespository from '../../typeorm/repositories/CustomerRepository';
 
 export default class CustomersController {
   public async index(request: Request, response: Response): Promise<Response> {
