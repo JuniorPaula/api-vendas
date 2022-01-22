@@ -1,6 +1,5 @@
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { pathsToModuleNameMapper } from 'ts-jest/utils';
+import { pathsToModuleNameMapper } from 'ts-jest';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { compilerOptions } = require('./tsconfig.json');

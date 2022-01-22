@@ -4,9 +4,9 @@
   "description": "api de vendas com nodejs e typescript",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "test": "jest"
   },
   "author": "Junior Paula",
   "license": "ISC",
